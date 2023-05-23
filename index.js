@@ -16,12 +16,6 @@ const questions = [
         message: "Description"
     },
     {
-        type: 'list',
-        name: 'toc',
-        message: "Table of Contents",
-        choices: ['1', '2', '3'] 
-    },
-    {
         type: 'input',
         name: 'installation',
         message: "Installation"
@@ -33,9 +27,9 @@ const questions = [
     },
     {
         type: 'list',
-        name: 'licence',
-        message: "Licence",
-        choices: ['1', '2', '3'] 
+        name: 'license',
+        message: "License",
+        choices: ['MIT', 'IBM', 'MOZILLA']
     },
     {
         type: 'input',
@@ -47,24 +41,32 @@ const questions = [
         name: 'questions',
         message: "Questions"
     },
+    {
+        type: 'input',
+        name: 'tests',
+        message: "Tests"
+    },
 ];
-.then(answers => {
-    console.log('Answers', answers)
-})
-.catch.error('Error', error);
+
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            console.error(`Error writing ${fileName}:`, err);
+        } else {
+            console.log(`${fileName} created successfully!`);
+        }
+    });
 }
-// add fs code here to save file 
 
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPromptModule(questions).then(function(answers){
+    inquirer.prompt(questions).then(function (answers) {
         const markdownText = generateMarkdown(answers);
-        writeToFile('files', markdownText);
+        writeToFile('./utils/README.md', markdownText);
     })
 }
 
