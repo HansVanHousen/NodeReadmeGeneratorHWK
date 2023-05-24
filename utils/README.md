@@ -1,8 +1,8 @@
-# s
+# This is the title of my ReadMe
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  s
+  What its about
 
   ## Table of Contents
   [Description](#description)  <br>  
@@ -14,23 +14,23 @@
   [Questions](#questions)   
 
   ## Installation
-  s
+  How to install
 
   ## Usage
-  s
+  How to use
 
   ## License 
   This application was licensed under MIT <br> 
   https://opensource.org/licenses/MIT
 
   ## Contributing
-  s
+  Who worked on it
 
   ## Tests
-  d
+  test yourself!
 
   ## Questions
-  s <br> 
-  https://github.com/ssss <br> 
+  What do you want to know? <br> 
+  https://github.com/hansvanhousen <br> 
   If you need any further information then please contact me via email here: hans@hans.com
 
